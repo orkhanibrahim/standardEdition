@@ -5,6 +5,7 @@ import java.util.List;
 
 public class StudenstMain {
 
+    Students students1 = new Students();
 
     public static void main(String[] args) {
 
@@ -25,6 +26,7 @@ public class StudenstMain {
                 System.out.println(students);
             }
         }
+
     }
 
 }
