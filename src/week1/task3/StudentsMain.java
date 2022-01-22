@@ -2,11 +2,9 @@ package week1.task3;
 
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
-public class StudentsMain  {
-
+public class StudentsMain {
 
 
     public static void main(String[] args) {
@@ -23,11 +21,18 @@ public class StudentsMain  {
         studentList.add(new Students("Sakir", "Qismetov", 24));
         studentList.add(new Students("Novruz", "Eldarov", 19));
 
-        studentList.sort(Comparator.comparing(Students::getAge));
-
+        for (int i = 0; i < studentList.size() - 1; i++) {
+            int a = i;
+            for (int j = i + 1; j < studentList.size(); j++) {
+                if (studentList.get(a).getAge() > studentList.get(j).getAge())
+                    a = j;
+            }
+            Students temporary = studentList.get(i);
+            studentList.set(i, studentList.get(a));
+            studentList.set(a, temporary);
+        }
         System.out.println(studentList);
 
+
     }
-
-
 }
