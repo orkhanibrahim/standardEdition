@@ -24,12 +24,12 @@ public class TrimStrings {
             else if(string.length()>size){
                 char[] charArray = new char[size];
                 for(int j=0;j<charArray.length;j++){
-                    charArray[j] = stringList.get(i).charAt(j);
+                    charArray[j] = string.charAt(j);
                 }
                 System.out.println(charArray);
             }
             else{
-                System.out.println(stringList.get(i));
+                System.out.println(string);
             }
 
         }
