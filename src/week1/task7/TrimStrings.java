@@ -28,9 +28,10 @@ public class TrimStrings {
                 }
                 System.out.println(charArray);
             }
-            else if(string.length()==size){
+            else{
                 System.out.println(stringList.get(i));
             }
+
         }
     }
 
@@ -41,6 +42,6 @@ public class TrimStrings {
         arrayList.add("434");
         arrayList.add("23");
         TrimStrings trimStrings = new TrimStrings();
-        trimStrings.truncateString(10,arrayList);
+        trimStrings.truncateString(3,arrayList);
     }
 }
