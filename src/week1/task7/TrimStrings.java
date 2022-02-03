@@ -12,23 +12,20 @@ public class TrimStrings {
 
 
     public void truncateString(int size, List<String> stringList) {
-        for (int i = 0; i < stringList.size(); i++) {
-            String string = stringList.get(i);
-            if(string.length()<size){
-                String s ="0";
+        for (String string : stringList) {
+            if (string.length() < size) {
+                String s = "0";
                 while (string.length() < size) {
-                    string = s + string;
+                    string += s;
                 }
                 System.out.println(string);
-            }
-            else if(string.length()>size){
+            } else if (string.length() > size) {
                 char[] charArray = new char[size];
-                for(int j=0;j<charArray.length;j++){
+                for (int j = 0; j < charArray.length; j++) {
                     charArray[j] = string.charAt(j);
                 }
                 System.out.println(charArray);
-            }
-            else{
+            } else {
                 System.out.println(string);
             }
 
